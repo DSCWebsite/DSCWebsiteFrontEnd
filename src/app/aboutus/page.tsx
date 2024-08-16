@@ -14,8 +14,6 @@ export default function Home() {
         <AboutusHero />
         <AboutusVisionMission />
         <AboutusLogoInformation />
-        {/* <AboutusMission />
-      <AboutusVision /> */}
         <AboutusDepartment />
         <AboutusOrganizationStructure />
         <FooterComponent />

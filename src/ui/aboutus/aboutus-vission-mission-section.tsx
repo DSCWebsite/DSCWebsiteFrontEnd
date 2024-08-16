@@ -21,7 +21,7 @@ const AboutusVisionMission = () => {
         viewport={{ once: true, amount: 0.1 }}
         transition={{ staggerChildren: 0.3, duration: 1 }}
         className={
-            "w-screen flex flex-col align-middle justify-between text-white bg-no-repeat bg-cover bg-opacity-60 overflow-x-hidden relative lg:bg-[center_bottom_-20rem] lg:px-10 lg:py-14 mb-10" +
+            "md:p-10 w-screen flex flex-col align-middle justify-between text-white bg-no-repeat bg-cover bg-opacity-60 overflow-x-hidden relative lg:bg-[center_bottom_-20rem] px-0 lg:px-10 lg:py-14 lg:mb-10" +
             inter700.className
         }
     >
@@ -29,17 +29,17 @@ const AboutusVisionMission = () => {
             initial="hidden"
             whileInView="show"
             variants={variants}
-            className="mx-16"
+            className="mx-8 md:mx-16"
         >
-            <div className="flex">
-                <div className="w-1/2 p-4">
+            <div className="flex flex-col lg:flex-row">
+                <div className="w-full lg:w-1/2 py-4">
                     <div className="w-full bg-white p-4 border rounded-lg shadow">
                         <h1 className={`text-3xl lg:text-5xl ${inter700.className} text-303F9A mb-10 text-center`}>VISION</h1>
                         <p className={`text-md lg:text-xl ${inter300.className} text-black`}>The vision of the Data Science Club is to become one of the largest organizations at Bina Nusantara University through innovation and achievement.</p>
                     </div>
                 </div>
                 <div className="w-px bg-gray-400 mx-4"></div>
-                <div className="w-1/2 p-4">
+                <div className="w-full lg:w-1/2 py-4">
                     <div className="w-full bg-white p-4 border rounded-lg shadow">
                         <h1 className={`text-3xl lg:text-5xl ${inter700.className} text-303F9A mb-10 text-center`}>MISSION</h1>
                         <p className={`text-md lg:text-xl ${inter300.className} text-black`}>1. Provide a platform that facilitates learning and exchanging ideas for its members.</p>

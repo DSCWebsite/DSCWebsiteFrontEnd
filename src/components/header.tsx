@@ -13,7 +13,7 @@ const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 const HeaderComponent: FC = () => {
   const [activeLink, setActiveLink] = useState<string | null>(null);
   const path = usePathname();
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,7 +49,7 @@ const HeaderComponent: FC = () => {
           height={100}
           className="my-auto h-10 w-10"
         />
-        <nav className="flex-row align-middle hidden xl:flex h-full">
+        <nav className="flex-row align-middle hidden md:flex h-full">
           {navlinks.map((navobject, index) => {
             const isActive = path === navobject.link;
             return (
@@ -73,7 +73,7 @@ const HeaderComponent: FC = () => {
           })}
         </nav>
         <div
-          className="xl:hidden peer transition flex flex-col justify-center align-middle text-center"
+          className="md:hidden peer transition flex flex-col justify-center align-middle text-center"
           tabIndex={1}
         >
           <Image

@@ -28,10 +28,10 @@ const AboutusLogoInformation = () => {
             initial="hidden"
             whileInView="show"
             variants={variants}
-            className="mx-16 mt-10"
+            className="mx-8 md:mx-16 mt-10"
         >
             <h1 className={`text-3xl lg:text-5xl ${inter700.className} text-303F9A mb-10`}>LOGO</h1>
-            <Image src={"/logo-meaning.png"} alt="logo" height={400} width={900} />
+            <Image src={"/logo-meaning.svg"} alt="logo" height={400} width={900} />
         </motion.div>
     </motion.section>
 }
