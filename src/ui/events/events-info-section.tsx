@@ -177,31 +177,43 @@ const EventCard: React.FC<EventCardProps> = ({
   </div>
 );
 
-const eventInfo = () => {
+const EventInfo: React.FC = () => {
   return (
-    <section
-      className={
-        "min-h-[600px] w-full flex flex-col align-middle text-center overflow-hidden " +
-        poppins500.className
-      }
-    >
-      <div className="flex flex-wrap justify-center gap-6 mt-10">
-        {events.map((event, index) => (
-          <EventCard
-            key={index}
-            buttonText={event.buttonText}
-            imageUrl={event.imageUrl}
-            eventType={event.eventType}
-            date={event.date}
-            location={event.location}
-            participants={event.participants}
-            eventTitle={event.eventTitle}
-            description={event.description}
-          />
-        ))}
+    <>
+      <div className="fixed top-0 left-0 w-1/8 h-3/4 z-[-1]">
+        <img src="/eventsasset/polygon_2.svg" alt="Polygon 2" className="w-full h-full object-cover" />
       </div>
-    </section>
+      <div className="fixed bottom-0 left-0 w-1/8 h-3/4 z-[-2]">
+        <img src="/eventsasset/polygon_3.svg" alt="Polygon 3" className="w-full h-full object-cover" />
+      </div>
+      <div className="fixed top-0 right-0 w-1/8 h-3/4 z-[-1]">
+        <img src="/eventsasset/polygon_4.svg" alt="Polygon 4" className="w-full h-full object-cover" />
+      </div>
+
+      <section
+        className={
+          "min-h-[600px] w-full flex flex-col items-center text-center overflow-hidden " +
+          poppins500.className
+        }
+      >
+        <div className="flex flex-wrap justify-center gap-6 mt-10">
+          {events.map((event, index) => (
+            <EventCard
+              key={index}
+              buttonText={event.buttonText}
+              imageUrl={event.imageUrl}
+              eventType={event.eventType}
+              date={event.date}
+              location={event.location}
+              participants={event.participants}
+              eventTitle={event.eventTitle}
+              description={event.description}
+            />
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 
-export default eventInfo;
+export default EventInfo;
